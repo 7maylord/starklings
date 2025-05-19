@@ -1,6 +1,5 @@
 
 
-// I AM NOT DONE
 
 use debug::PrintTrait;
 
@@ -11,8 +10,8 @@ fn main() {
 
     // This is just a print statement for arrays.
     arr1.clone().print();
-
     //TODO fix the error here without modifying this line.
+    let mut arr1 = arr1;
     arr1.append(88);
 
     arr1.print();

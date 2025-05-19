@@ -2,14 +2,13 @@
 // the Array gets created in the function itself and passed back to the main
 // function.
 
-// I AM NOT DONE
+
 
 use debug::PrintTrait;
+use array::ArrayTrait;
 
 fn main() {
-    let arr0 = ArrayTrait::<felt252>::new();
-
-    let mut arr1 = fill_arr(arr0);
+    let mut arr1 = fill_arr();
 
     arr1.clone().print();
 
@@ -18,9 +17,9 @@ fn main() {
     arr1.clone().print();
 }
 
-// `fill_arr()` should no longer take `arr: Array<felt252>` as argument
-fn fill_arr(arr: Array<felt252>) -> Array<felt252> {
-    let mut arr = arr;
+// `fill_arr()` should create and return a new array
+fn fill_arr() -> Array<felt252> {
+    let mut arr = ArrayTrait::<felt252>::new();
 
     arr.append(22);
     arr.append(44);

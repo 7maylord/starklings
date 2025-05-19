@@ -1,6 +1,7 @@
+use core::option::Option;
+use core::option::OptionTrait;
 
 
-// I AM NOT DONE
 
 #[test]
 fn test_options() {
@@ -14,6 +15,9 @@ fn test_options() {
 fn simple_option(optional_target: Option<felt252>) {
     // TODO: use the `is_some` and `is_none` methods to check if `optional_target` contains a value.
     // Place the assertion and the print statement below in the correct blocks.
-    assert(optional_target.unwrap() == 'starklings', 'err1');
-    println!(" option is empty ! ");
+    if optional_target.is_some() {
+        assert(optional_target.unwrap() == 'starklings', 'err1');
+    } else {
+        println!(" option is empty ! ");
+    }
 }
