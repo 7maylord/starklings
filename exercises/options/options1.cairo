@@ -31,6 +31,6 @@ fn check_icecream() {
 #[test]
 fn raw_value() {
     // TODO: Fix this test. How do you get at the value contained in the Option?
-    let icecreams = maybe_icecream(12);
-    assert(icecreams.unwrap() == 5, 'err_6');
+    let icecreams = maybe_icecream(12).unwrap();
+    assert(icecreams == 5, 'err_6');
 }
